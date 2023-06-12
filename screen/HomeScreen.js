@@ -10,12 +10,12 @@ import BottomNavigator from "../Components/BottomNavigator";
 import SearchBar from "../Components/SearchBar";
 import { AntDesign } from "@expo/vector-icons";
 import Product from "../Components/ProductList";
+import ProductDetail from "../Components/ProductList";
 
 const HomeScreen = () => {
   return (
     <View style={Styles.container}>
       <View style={Styles.headerBar}>
-        {/* SearchBar */}
         <SearchBar />
 
         <TouchableOpacity>
@@ -23,10 +23,13 @@ const HomeScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* เนื้อหาหลัก */}
-      <Product />
+    
+      <ScrollView>
+        {/* เนื้อหาหลัก */}
+        <Product />
+      </ScrollView>
+    
 
-      {/* BottomBar */}
       <BottomNavigator />
     </View>
   );
@@ -46,10 +49,11 @@ const Styles = StyleSheet.create({
     right: 0,
     zIndex: 9999,
     backgroundColor: "#f7a25c",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     alignItems: "center",
     flexDirection: "row",
-    paddingTop: 20,
+    paddingTop: 40,
+    paddingBottom: 10,
   },
 });
 

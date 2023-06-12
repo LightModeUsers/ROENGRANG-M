@@ -68,9 +68,7 @@ const UserScreen = () => {
 
   const renderUser = ({ item }) => (
     <View style={styles.row}>
-      <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{item.username}</Text>
-      <Text style={styles.cell}>{item.gender}</Text>
+      <Text style={styles.cell}>{item.user_fullname}</Text>
       <EditButton onPress={() => handleUpdate(item)} />
       <DeleteButton onPress={() => handleDelete(item)} />
     </View>
@@ -127,9 +125,7 @@ const UserScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerCell}>Name</Text>
-        <Text style={styles.headerCell}>Username</Text>
-        <Text style={styles.headerCell}>Gender</Text>
+        <Text style={styles.headerCell}>Fullname</Text>
         <Text style={styles.headerCell}>Edit</Text>
         <Text style={styles.headerCell}>Delete</Text>
       </View>
